@@ -4,7 +4,7 @@ require_once( 'lib/functions.inc' );
 require_once( 'lib/log.class.inc' );
 require_once( 'lib/EC.class.inc' );
 define('DB_HOST','localhost');
-define('DB_NAME','product');//
+define('DB_NAME','product_test');//
 define('DB_USER','root');
 define('DB_PASS','Hello0617');
 define('UPLOADPATH','upload/');

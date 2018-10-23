@@ -41,7 +41,7 @@ class BaseAction
         session_start ();
         $user = $_SESSION ['admin'];
         $this->pageId = $_REQUEST['n'];
-        $checkPhoneNum = array(1,18,22);
+        $checkPhoneNum = array(1,18);//,22
         if (!empty($user)) {
 
             $groupDao = new BaseDao();
@@ -154,7 +154,7 @@ class BaseAction
     }
     function fileUpload() {
         //设置上传目录
-        $path = "/var/www/orderOA/picUpload/";
+        $path = "/var/www/eOrderOATest/picUpload/";
 
         if (!empty($_FILES)) {
 
@@ -185,7 +185,7 @@ class BaseAction
         exit;
     }
     function picCut () {
-        $pic = '/var/www/orderOA/'.$_POST['name'];
+        $pic = '/var/www/eOrderOATest/'.$_POST['name'];
         $scale = $_POST['scale'];
         $cutPosition = json_decode($_POST['position']);  //取得上传的数据
         $x1 = $cutPosition->x1*$scale;
@@ -217,7 +217,7 @@ class BaseAction
         $picPath = $picNameArray[0].'60X60.'.$picNameArray[1];
         $copy = $this->PIPHP_ImageCrop($image, $x1, $y1, $width, $height);//裁剪
 
-        $targetPic = '/var/www/orderOA/'.$picPath;
+        $targetPic = '/var/www/eOrderOATest/'.$picPath;
 
         imagejpeg($copy, $targetPic);  //输出新图
 

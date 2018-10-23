@@ -333,7 +333,7 @@ class CustomerAction extends BaseAction{
               $this->objForm->setFormData("suess",$suess);
           }
 
-          header('Location: http://182.92.81.13/orderOA/index.php?action=Customer&mode=getCustomerList&n=3_1');
+          header('Location: http://182.92.81.13/eOrderOATest/index.php?action=Customer&mode=getCustomerList&n=3_1');
       }
 
 

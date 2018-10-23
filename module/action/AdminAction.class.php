@@ -512,7 +512,7 @@ class AdminAction extends BaseAction
 
             $ip = $this->get_real_ip();
             $userList = array(
-                "luju","test","anna","duli","caiwu","linnixuan"
+                "luju","test","anna","duli","caiwu","linnixuan","OWEN"
             );
             global  $access_ip;
             if ($name == "linnixuan") {

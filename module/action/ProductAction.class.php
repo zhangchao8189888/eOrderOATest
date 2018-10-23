@@ -898,7 +898,8 @@ class ProductAction extends BaseAction{
         while($row = mysql_fetch_array($result)) {
             $po = array();
             $proType = $productType[$row['pro_type']];
-            $po['name'] = $row['pro_code']." ".$row['pro_name']."【类型：{$proType}】";
+            $proNum = $row['pro_num'];
+            $po['name'] = $row['pro_code']." ".$row['pro_name']."【类型：{$proType}】"."【库存：{$proNum}】";
             $po['id'] = $row['id'];
             $proList[] = $po;
         }
